@@ -1,0 +1,361 @@
+ml lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URBAN SHOES - Tienda de Zapatos</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f0;
+    color: #26382e;
+}
+
+header {
+    background: #173d32;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+nav {
+    margin-top: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.portada {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 55px 8%;
+    background: #e5eadf;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.portada h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.portada p {
+    margin-bottom: 20px;
+}
+
+.portada img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+button {
+    background: #244b38;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #52775b;
+}
+
+section {
+    padding: 45px 7%;
+    text-align: center;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+.producto img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    margin: 12px;
+}
+
+.producto p {
+    margin: 10px;
+}
+
+.precio {
+    color: #244b38;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 12px;
+}
+
+.carrito {
+    background: #e5eadf;
+}
+
+#lista {
+    list-style: none;
+    margin: 20px;
+}
+
+#lista li {
+    margin: 12px;
+}
+
+footer {
+    background: #173d32;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+@media(max-width:600px) {
+    .portada h2 {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>👟 URBAN SHOES</h1>
+    <p>Camina con tu propio estilo</p>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#carrito">Carrito 🛒</a>
+    </nav>
+</header>
+
+<section class="portada" id="inicio">
+
+    <div>
+        <h2>Encuentra tu estilo</h2>
+        <p>Zapatos modernos, cómodos y de excelente calidad.</p>
+        <a href="#productos">
+            <button>Ver productos</button>
+        </a>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85" alt="Tenis deportivos">
+
+</section>
+
+<section id="productos">
+
+    <h2>NUESTROS PRODUCTOS</h2>
+    <p>Conoce nuestra colección de calzado.</p>
+
+    <div class="contenedor">
+
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=85" alt="Tenis rojos">
+            <h3>Tenis Street Red</h3>
+            <p>Tenis deportivos modernos.</p>
+            <div class="precio">$899 MXN</div>
+            <button onclick="agregar('Tenis Street Red',899)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=85" alt="Tenis casuales">
+            <h3>Tenis Classic</h3>
+            <p>Calzado casual para diario.</p>
+            <div class="precio">$749 MXN</div>
+            <button onclick="agregar('Tenis Classic',749)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=600&q=85" alt="Zapatos elegantes">
+            <h3>Zapato Formal</h3>
+            <p>Perfectos para ocasiones especiales.</p>
+            <div class="precio">$1,099 MXN</div>
+            <button onclick="agregar('Zapato Formal',1099)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=85" alt="Tenis blancos">
+            <h3>Tenis Motion</h3>
+            <p>Comodidad para tus actividades.</p>
+            <div class="precio">$999 MXN</div>
+            <button onclick="agregar('Tenis Motion',999)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=85" alt="Tenis urbanos">
+            <h3>Tenis Urban</h3>
+            <p>Estilo para todos los días.</p>
+            <div class="precio">$829 MXN</div>
+            <button onclick="agregar('Tenis Urban',829)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=600&q=85" alt="Zapatos de vestir">
+            <h3>Zapato Ejecutivo</h3>
+            <p>Diseño elegante y moderno.</p>
+            <div class="precio">$1,199 MXN</div>
+            <button onclick="agregar('Zapato Ejecutivo',1199)">Agregar al carrito</button>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="carrito" id="carrito">
+
+    <h2>🛒 CARRITO DE COMPRAS</h2>
+
+    <ul id="lista">
+        <li>Tu carrito está vacío.</li>
+    </ul>
+
+    <h3>Total: $<span id="total">0</span> MXN</h3>
+
+    <br>
+
+    <button onclick="comprar()">Finalizar compra</button>
+
+</section>
+
+<section id="nosotros">
+    <h2>SOBRE NOSOTROS</h2>
+    <p>
+        Urban Shoes es una tienda de zapatos que ofrece
+        diferentes estilos para todas las ocasiones,
+        buscando siempre comodidad, calidad y moda.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 URBAN SHOES - Todos los derechos reservados.</p>
+</footer>
+
+<script>
+
+let carrito = [];
+
+function agregar(nombre, precio) {
+
+    let producto = carrito.find(p => p.nombre === nombre);
+
+    if(producto) {
+        producto.cantidad++;
+    } else {
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            cantidad: 1
+        });
+    }
+
+    actualizar();
+    alert("Producto agregado al carrito");
+}
+
+function actualizar() {
+
+    let lista = document.getElementById("lista");
+    let total = 0;
+
+    lista.innerHTML = "";
+
+    if(carrito.length === 0) {
+        lista.innerHTML = "<li>Tu carrito está vacío.</li>";
+    }
+
+    carrito.forEach((p, i) => {
+
+        total += p.precio * p.cantidad;
+
+        let li = document.createElement("li");
+
+        li.innerHTML = `
+            ${p.nombre} - $${p.precio} MXN
+            <br>
+            Cantidad: ${p.cantidad}
+            <button onclick="cambiar(${i},-1)">-</button>
+            <button onclick="cambiar(${i},1)">+</button>
+            <button onclick="eliminar(${i})">Quitar</button>
+        `;
+
+        lista.appendChild(li);
+    });
+
+    document.getElementById("total").textContent =
+        total.toLocaleString("es-MX");
+}
+
+function cambiar(i, cantidad) {
+
+    carrito[i].cantidad += cantidad;
+
+    if(carrito[i].cantidad <= 0) {
+        carrito.splice(i,1);
+    }
+
+    actualizar();
+}
+
+function eliminar(i) {
+    carrito.splice(i,1);
+    actualizar();
+}
+
+function comprar() {
+
+    if(carrito.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+    }
+
+    alert("¡Gracias por tu compra de demostración!");
+
+    carrito = [];
+    actualizar();
+}
+
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<ht
